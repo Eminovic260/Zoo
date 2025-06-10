@@ -1,11 +1,15 @@
 <?php
+
 namespace App\Animals;
+
 use App\Animal;
+use App\Interfaces\CanSwim;
+use App\Interfaces\CanWalk;
 
-
-class Zebra extends Animal {
-        protected function getNoise(): string
+class Zebra extends Animal implements CanSwim, CanWalk
 {
-    return 'hiiiiii';
-}
+    protected function getNoise(): string
+    {
+        return 'hiiiiii';
+    }
 }

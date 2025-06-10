@@ -1,7 +1,6 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-
 use App\Animals\Fish;
 use App\Animals\BubbleFish;
 use App\Animals\CatFish;
@@ -10,7 +9,7 @@ use App\Animals\Elephant;
 use App\Animals\Zebra;
 use App\Animals\Parrot;
 use App\Animals\Dove;
-
+use App\Zoo;
 
 $animals = [];
 
@@ -26,15 +25,18 @@ $animalsToCreate = [
 ];
 
 
-
 foreach ($animalsToCreate as $animalClass => $count) {
     for ($i = 1; $i <= $count; $i++) {
         $animals[] = new $animalClass($animalClass . " " . $i);
     }
 }
 
+
+
+
 foreach ($animals as $animal) {
-    echo $animal->getName() . ' : ' . $animal->noise() . PHP_EOL;
+    Zoo::addAnimal($animal);
 }
 
-?>
+
+Zoo::visitTheZoo();

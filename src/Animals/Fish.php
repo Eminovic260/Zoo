@@ -2,10 +2,14 @@
 
 namespace App\Animals;
 
-use App\Animal;
 
-class Fish extends Animal {
-    protected function getNoise(): string {
+use App\Animal;
+use App\Interfaces\CanSwim as InterfacesCanSwim;
+
+class Fish extends Animal implements InterfacesCanSwim
+{
+    protected function getNoise(): string
+    {
         return 'bloubloublou';
     }
 }

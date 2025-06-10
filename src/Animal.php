@@ -6,7 +6,7 @@ namespace App;
 abstract class Animal
 {
 
-    private $name;
+    private string $name;
 
 
 

@@ -1,11 +1,15 @@
 <?php
+
 namespace App\Animals;
+
 use App\Animal;
+use App\Interfaces\CanFly;
+use App\Interfaces\CanWalk;
 
-
-class Parrot extends Animal {
-        protected function getNoise(): string
+class Parrot extends Animal implements CanFly, CanWalk
 {
-    return 'coco';
-}
+    protected function getNoise(): string
+    {
+        return 'coco';
+    }
 }

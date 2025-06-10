@@ -1,10 +1,14 @@
 <?php
 
 namespace App\Animals;
-use App\Animal;
 
-class BubbleFish extends Animal {
-    protected function getNoise(): string {
+use App\Animal;
+use App\Interfaces\CanSwim as InterfacesCanSwim;
+
+class BubbleFish extends Animal implements InterfacesCanSwim
+{
+    protected function getNoise(): string
+    {
         return 'bloubloublou avec des bulles';
     }
 }
