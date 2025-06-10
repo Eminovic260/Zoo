@@ -2,15 +2,22 @@
 
 namespace App;
 
+
 abstract class Animal
 {
 
     private $name;
 
+
+
+    
     function __construct(string $name)
     {
         $this->name = $name;
     }
+
+
+
 
     public function getName(): string
     {
@@ -18,7 +25,14 @@ abstract class Animal
     }
 
 
+
+
+
     abstract protected function getNoise(): string;
+
+
+
+
 
     public function noise()
     {
